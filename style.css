@@ -1,0 +1,591 @@
+/* Headings, Call-to-actions, Header Navigation */
+
+/* font-family: 'Raleway', sans-serif; */
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+/* Body */
+
+/* font-family: 'Open Sans', sans-serif; */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+:root {
+  /* ### Primary */
+  --Very-Dark-Blue: hsl(243, 87%, 12%);
+  --Desaturated-Blue: hsl(238, 22%, 44%);
+  /* ### Accent */
+  --Bright-Blue: hsl(224, 93%, 58%);
+  --Moderate-Cyan: hsl(170, 45%, 43%);
+  /* ### Neutral */
+  --Light-Grayish-Blue: hsl(240, 75%, 98%);
+  --Light-Gray: hsl(0, 0%, 75%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--Bright-Blue);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--Moderate-Cyan);
+}
+
+::placeholder {
+  color: var(--Light-Gray);
+}
+
+html {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--Very-Dark-Blue);
+}
+
+button,
+header nav ul,
+a,
+h1,
+h2,
+h3,
+h5 {
+  font-family: "Raleway", sans-serif;
+}
+
+p,
+input {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* header */
+
+header {
+  padding-top: min(6.5vw, 4.65em);
+}
+
+.header-content {
+  width: min(88%, 1280px);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img {
+  height: min(6vw, 50px);
+}
+
+.header-content ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.header-content a {
+  color: var(--Very-Dark-Blue);
+  text-decoration: none;
+  margin-left: min(6.5vw, 3.5em);
+  font-size: clamp(0.85rem, 3vw, 1.15rem);
+}
+
+.header-content a:hover {
+  text-decoration: underline;
+}
+
+/* intro */
+
+.intro {
+  background-image: url("./images/bg-curve-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 100%;
+  padding: 7.5em 0 10.35em;
+}
+
+.intro-img {
+  width: min(80%, 50em);
+  margin: auto;
+}
+
+.intro-img img {
+  width: 100%;
+}
+
+.intro-content {
+  text-align: center;
+}
+
+.intro-content h1 {
+  width: min(90%, 50em);
+  margin: 1.3em auto 0.7em;
+  font-size: clamp(1.7rem, 3vw, 2.8rem);
+}
+
+.intro-content p {
+  width: min(80%, 50em);
+  margin: auto;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+}
+
+.intro-content form {
+  width: min(80%, 28em);
+  margin: auto;
+  padding-top: 2.2em;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+}
+
+.intro-content .input-container input[type="email"] {
+  width: 100%;
+  padding: 0.9em 2em;
+  font-size: clamp(0.85rem, 2vw, 1.1rem);
+  outline: none;
+  border-radius: 0.3em;
+  border: 1px solid;
+}
+
+.intro-content form:invalid input[type="email"] {
+  border-color: rgba(255, 0, 0, 0.6);
+}
+
+.intro-content form:invalid .input-container::after {
+  content: attr(data-error);
+  display: block;
+  margin-top: 0.3em;
+  font-family: "Open Sans", sans-serif;
+  font-size: clamp(0.85rem, 2vw, 1.1rem);
+  color: rgba(255, 0, 0, 0.6);
+  text-align: left;
+}
+
+.intro-content form button {
+  background: var(--Bright-Blue);
+  color: white;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  font-weight: 700;
+  width: 100%;
+  padding: 1em;
+  border-radius: 0.3em;
+  box-shadow: 0 3px 6px var(--Light-Gray);
+}
+
+.intro-content button:hover {
+  opacity: 0.7;
+}
+
+/* features */
+
+.features {
+  background-color: var(--Light-Grayish-Blue);
+  opacity: 0.8;
+  padding: 3em 0 6.5em;
+}
+
+.features-img {
+  width: min(85%, 720px);
+  margin: auto;
+}
+
+.features-img img {
+  width: 100%;
+}
+
+.features-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 95px;
+}
+
+/* productive */
+
+.productive h2 {
+  font-size: clamp(1.2rem, 3vw, 2.9rem);
+  text-align: center;
+}
+
+.productive p {
+  width: min(90%, 50em);
+  margin: auto;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.productive p:nth-of-type(1) {
+  padding: 1.5em 0 1.3em;
+}
+
+.productive a {
+  margin: 3em auto;
+  padding-bottom: 0.35em;
+  text-decoration: none;
+  font-size: clamp(0.85rem, 3vw, 1.1rem);
+  color: var(--Moderate-Cyan);
+  border-bottom: 1px solid var(--Moderate-Cyan);
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+.productive a:hover {
+  border-color: hsl(170, 63%, 58%);
+  color: hsl(170, 63%, 58%);
+}
+
+.productive a:hover svg *:not(path) {
+  fill: hsl(170, 63%, 58%);
+}
+
+/* testimonial */
+
+.testimonial {
+  width: min(75%, 40em);
+  margin: auto;
+  background-color: var(--Dark-Blue-Testimonial);
+  padding: 1.2em 1.8em 0.5em;
+  border-radius: 5px;
+  box-shadow: 0 0 20px var(--Light-Gray);
+}
+
+.testimonial p {
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  margin-bottom: 1.5em;
+}
+
+.testimonial-person img {
+  width: 25px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 0.7em;
+}
+
+.testimonial-person h5 {
+  font-size: clamp(0.65rem, 2vw, 0.8rem);
+}
+
+.testimonial-person p {
+  font-size: clamp(0.5rem, 1vw, 0.6rem);
+}
+
+/* subscribe */
+
+.subscribe {
+  background-color: var(--Desaturated-Blue);
+}
+
+.subscribe-container {
+  width: min(80%, 860px);
+  margin: auto;
+  text-align: center;
+  padding: 3.6em 0 5em;
+  color: white;
+}
+
+.subscribe-content h3 {
+  font-size: clamp(1.2rem, 4vw, 2.3rem);
+}
+
+.subscribe-content p {
+  margin: 1.2em auto 2em;
+  max-width: 620px;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+.subscribe-container form {
+  width: min(100%, 300px);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subscribe-container form input[type="email"] {
+  width: 240px;
+  padding: 1em;
+  outline: none;
+  font-size: clamp(0.7rem, 2vw, 0.9rem);
+  border-radius: 0.3em;
+  border: none;
+}
+
+.subscribe-container form:invalid .input-container::after {
+  content: attr(data-error);
+  display: block;
+  margin-top: 0.3em;
+  font-family: "Open Sans", sans-serif;
+  font-size: clamp(0.85rem, 2vw, 1.1rem);
+  text-align: left;
+  color: white;
+}
+
+.subscribe-container form:invalid input[type="email"] {
+  border: 1px solid;
+  border-color: rgba(255, 0, 0, 0.6);
+}
+
+.subscribe-container form button {
+  width: 240px;
+  margin-top: 1em;
+  padding: 1em;
+  background: var(--Bright-Blue);
+  border: none;
+  border-radius: 0.3em;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  font-size: clamp(0.65rem, 2vw, 1rem);
+  font-weight: 700;
+}
+
+.subscribe-container form button:hover {
+  opacity: 0.7;
+}
+
+/* footer */
+
+footer {
+  background-color: var(--Very-Dark-Blue);
+}
+
+.footer-container {
+  padding-top: 65px;
+  width: min(80%, 500px);
+  margin: auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4em;
+  margin: 2.5em auto 2em;
+}
+
+.company-details {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.2em;
+}
+
+.company-detail {
+  display: flex;
+  align-items: center;
+}
+
+.company-detail p {
+  color: white;
+  font-size: 1.15rem;
+}
+
+.company-detail .img-container {
+  min-width: 2.5em;
+  display: flex;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3.2em;
+}
+
+.footer-nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.footer-nav a:hover {
+  color: var(--Bright-Blue);
+}
+
+.social-link {
+  align-self: center;
+  display: flex;
+}
+
+.social-link a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  margin: 0 0.4em;
+  border: 1px solid white;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.social-link a:hover {
+  color: var(--Bright-Blue);
+  border-color: var(--Bright-Blue);
+}
+
+/* attribution */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: white;
+}
+
+.attribution a {
+  color: var(--Bright-Blue);
+  text-decoration: none;
+}
+
+@media screen and (min-width: 600px) {
+  .company-details {
+    align-items: center;
+  }
+  .footer-nav {
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 50px;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .intro {
+    background-image: url("./images/bg-curve-desktop.svg");
+    padding: 7.5em 0 20em;
+  }
+  .intro-container {
+    width: min(90%, 1280px);
+    margin: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .intro-img {
+    width: unset;
+    flex: 0.5;
+    margin: unset;
+  }
+  .intro-content {
+    text-align: left;
+    flex: 0.48;
+  }
+  .intro-content h1,
+  .intro-content p {
+    width: unset;
+  }
+  .intro-content form {
+    width: 39em;
+    margin: unset;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .intro-content .input-container {
+    flex: 0.63;
+  }
+  .intro-content form button {
+    flex: 0.33;
+  }
+  .features {
+    padding: 3em 0 7.5em;
+  }
+  .features-container {
+    width: min(89%, 1280px);
+    margin: auto;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .features-img {
+    flex: 0.42;
+    margin: unset;
+    width: 100%;
+  }
+  .features-content {
+    flex: 0.55;
+  }
+  .productive h2 {
+    text-align: left;
+  }
+  .productive p {
+    width: 33em;
+    margin: unset;
+  }
+  .productive a {
+    margin: 1em 0 3em;
+  }
+  .testimonial {
+    width: 26em;
+    margin: unset;
+  }
+  .subscribe-container {
+    width: min(89%, 1280px);
+    text-align: left;
+    padding: 7em 0 6.6em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .subscribe-content {
+    flex: 0.4;
+  }
+  .subscribe-content p {
+    margin: 0.9em auto 0;
+    max-width: unset;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+  }
+  .subscribe-container form {
+    width: unset;
+    margin: unset;
+    flex: 0.41;
+    align-items: flex-start;
+  }
+  .subscribe-container form .input-container {
+    width: 91.5%;
+  }
+  .subscribe-container form input[type="email"] {
+    width: 100%;
+  }
+  .subscribe-container form button {
+    width: 40%;
+  }
+  .footer-container {
+    padding-top: 110px;
+    width: min(89%, 1280px);
+  }
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1.5em auto 2.5em;
+    align-items: flex-start;
+  }
+  .company-details {
+    align-items: flex-start;
+    flex: 0.2;
+  }
+  .footer-nav {
+    justify-content: space-between;
+    flex: 0.28;
+  }
+  .social-link {
+    align-self: unset;
+    flex: 0.23;
+  }
+  .social-link a {
+    font-size: 1.2rem;
+    height: 32px;
+    width: 32px;
+  }
+}
